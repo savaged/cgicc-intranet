@@ -1,10 +1,6 @@
 #!/bin/bash
-echo "Content-type: text/html"
 echo
-echo "<html><head><title>Intranet</title></head><body><h1>Intranet</h1>"
-echo "<ul>"
-echo "<li><a href="cgi/test.cgi">Test CGI</a></li>"
-echo "<li><a href="cgi/todo2html.cgi">TO DO List (from ~/repos/docs/)</a></li>"
-echo "</ul>"
+echo "<html><head><title>Intranet</title></head><body>" ;
+echo "<p>I need to do a lot of work to understand how to use CGI with Apache2</p>"
 echo "</body></html>"
 

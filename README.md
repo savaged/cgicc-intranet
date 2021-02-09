@@ -3,12 +3,16 @@
 Internal website using CGI with Apache 2
 
 
+## WIP
+
+* Need to do a lot of work to understand CGI configuration with Apache 2
+
+
 ## Structure
 
 * Entry point: `var/www/html/index.html`
 
 * CGI index: `usr/lib/cgi-bin/index.cgi'
-	* CGI parts: `cgi/`
 
 
 
