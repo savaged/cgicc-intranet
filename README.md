@@ -6,6 +6,7 @@ Internal website using CGI with Apache 2
 ## WIP
 
 * Need to do a lot of work to understand CGI configuration with Apache 2
+* OR switch to one executable that does everything, with links driven by arguments
 
 
 ## Structure
@@ -24,7 +25,6 @@ The following is required for that to work:
 
 ```
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo usermod -a -G www-data pi
-pi@raspberrypi:/usr/lib/cgi-bin$ sudo chown -R www-data:www-data cgi
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo chown -R www-data:www-data index.cgi 
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo chmod +x index.cgi 
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo systemctl restart apache2
