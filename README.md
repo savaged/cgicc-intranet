@@ -19,6 +19,7 @@ The main elements (above) are 'deployed' in that a sym-link is added in their re
 The following is required for that to work:
 
 ```
+pi@raspberrypi:/usr/lib/cgi-bin$ sudo usermod -a -G www-data pi
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo chown -R www-data:www-data cgi
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo chown -R www-data:www-data index.cgi 
 pi@raspberrypi:/usr/lib/cgi-bin$ sudo chmod +x index.cgi 
