@@ -20,7 +20,7 @@ int main ()
     
     outputStandardDocTop();
 
-    cout << "<h1>\n";
+    outputH1Start();
 
     form_iterator fi = formData.getElement("action");  
     if(!fi->isEmpty() && fi != (*formData).end()) 
@@ -32,7 +32,7 @@ int main ()
         cout << "Default" << endl;  
     }
     
-    cout << "</h1>\n";
+    outputH1End();
     
 	outputStandardDocTail();
     

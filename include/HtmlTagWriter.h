@@ -7,7 +7,9 @@
 #include <stdlib.h> 
 
 void outputStandardDocTop();
-
 void outputStandardDocTail();
+
+void outputH1Start();
+void outputH1End();
 
 #endif
