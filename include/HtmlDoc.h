@@ -36,6 +36,9 @@ public:
 
     void writeH1(const std::string& text);
 
+    void writeA(
+            const std::string& link, const std::string& text);
+
 };
 
 #endif
