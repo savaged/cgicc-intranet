@@ -30,7 +30,7 @@ int main ()
         h1 = "Default";  
     }
     
-    HtmlDoc doc;
+    HtmlDoc doc = HtmlDoc("Test");
     doc.writeH1(h1);
     
     return 0;

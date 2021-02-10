@@ -8,10 +8,10 @@ void HtmlDoc::writeH1(const string& text)
     cout << h1(text) << endl;
 }
 
-void HtmlDoc::writeHead()
+void HtmlDoc::writeHead(const string& titleText)
 {
     cout << HTTPHTMLHeader() << endl;
-    cout << head(title("Intranet")) << endl;
+    cout << head(title(titleText)) << endl;
     cout << body() << endl;
 }
 

@@ -15,14 +15,18 @@
 class HtmlDoc
 {
 private:
-    void writeHead();
+    void writeHead(const std::string& titleText);
 
     void writeTail();
 
 public:
     HtmlDoc()
     {
-        writeHead();
+        writeHead("Intranet");
+    };
+    HtmlDoc(const std::string& titleText)
+    {
+        writeHead(titleText);
     };
 
     ~HtmlDoc()
