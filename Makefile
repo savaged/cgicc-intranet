@@ -1,16 +1,19 @@
 CXXFLAGS:= -g -Wall -Wextra -Werror
 TARGET:= index.cgi
 OBJDIR:= obj/
-OBJ:= $(OBJDIR)main.o
+SRCDIR:= src/
+INCDIR:= include/
+OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlTagWriter.o
 
 $(TARGET): $(OBJ)
-	g++ $(CXXFLAGS) -o $(TARGET) $< -lcgicc
+	g++ $(CXXFLAGS) -o $(TARGET) $^ -lcgicc
 
-$(OBJ): src/main.cpp
-	g++ $(CXXFLAGS) -c $< -o $@
+$(OBJDIR)%.o: $(SRCDIR)%.cpp
+	g++ $(CXXFLAGS) -I $(INCDIR) -c $< -o $@
 
 clean:
-	rm $(TARGET) $(OBJ)
+	rm -f $(TARGET)
+	rm -f $(OBJDIR)*.o
 
 install: 
 	cp $(TARGET) /usr/lib/cgi-bin
