@@ -14,24 +14,24 @@
 using namespace std;
 using namespace cgicc;
 
-int main () 
+int main() 
 {
     Cgicc cgi;
-    
-    string h1;
+    string page;
 
-    form_iterator fi = cgi.getElement("action");  
-    if(!fi->isEmpty() && fi != (*cgi).end()) 
+    form_iterator fi = cgi.getElement("page");  
+    if (!fi->isEmpty() && fi != (*cgi).end()) 
     {  
-        h1 = "Action requested: " + **fi;  
+        page = **fi;  
     }
     else
     {
-        h1 = "Default";  
+        page = "index";  
     }
     
-    HtmlDoc doc = HtmlDoc("Test");
-    doc.writeH1(h1);
-    
+    HtmlDoc doc = HtmlDoc("savaged");
+    // TODO add page selection then write that page
+    doc.writeH1(page);
+
     return 0;
 }

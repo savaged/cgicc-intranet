@@ -11,6 +11,8 @@ void HtmlDoc::writeH1(const string& text)
 void HtmlDoc::writeHead(const string& titleText)
 {
     cout << HTTPHTMLHeader() << endl;
+    cout << HTMLDoctype(HTMLDoctype::eStrict) << endl;
+    cout << html() << endl;
     cout << head(title(titleText)) << endl;
     cout << body() << endl;
 }
