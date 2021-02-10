@@ -9,7 +9,7 @@
 #include <cgicc/HTTPHTMLHeader.h> 
 #include <cgicc/HTMLClasses.h>  
 
-#include "HtmlTagWriter.h"
+#include "HtmlDoc.h"
 
 using namespace std;
 using namespace cgicc;
@@ -18,23 +18,20 @@ int main ()
 {
     Cgicc cgi;
     
-    outputStandardDocTop();
-
-    outputH1Start();
+    string h1;
 
     form_iterator fi = cgi.getElement("action");  
     if(!fi->isEmpty() && fi != (*cgi).end()) 
     {  
-        cout << "Action requested: " << **fi << endl;  
+        h1 = "Action requested: " + **fi;  
     }
     else
     {
-        cout << "Default" << endl;  
+        h1 = "Default";  
     }
     
-    outputH1End();
-    
-	outputStandardDocTail();
+    HtmlDoc doc;
+    doc.writeH1(h1);
     
     return 0;
 }

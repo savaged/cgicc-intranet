@@ -3,7 +3,7 @@ TARGET:= index.cgi
 OBJDIR:= obj/
 SRCDIR:= src/
 INCDIR:= include/
-OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlTagWriter.o
+OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlDoc.o
 
 $(TARGET): $(OBJ)
 	g++ $(CXXFLAGS) -o $(TARGET) $^ -lcgicc
