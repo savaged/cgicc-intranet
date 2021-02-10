@@ -16,14 +16,14 @@ using namespace cgicc;
 
 int main () 
 {
-    Cgicc formData;
+    Cgicc cgi;
     
     outputStandardDocTop();
 
     outputH1Start();
 
-    form_iterator fi = formData.getElement("action");  
-    if(!fi->isEmpty() && fi != (*formData).end()) 
+    form_iterator fi = cgi.getElement("action");  
+    if(!fi->isEmpty() && fi != (*cgi).end()) 
     {  
         cout << "Action requested: " << **fi << endl;  
     }

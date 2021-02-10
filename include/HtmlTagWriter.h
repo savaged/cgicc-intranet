@@ -6,6 +6,11 @@
 #include <stdio.h>  
 #include <stdlib.h> 
 
+#include <cgicc/CgiDefs.h> 
+#include <cgicc/Cgicc.h> 
+#include <cgicc/HTTPHTMLHeader.h> 
+#include <cgicc/HTMLClasses.h>  
+
 void outputStandardDocTop();
 void outputStandardDocTail();
 

@@ -1,15 +1,13 @@
 #include "HtmlTagWriter.h"
 
 using namespace std;
+using namespace cgicc;
 
 void outputStandardDocTop()
 {
-    cout << "Content-type:text/html\r\n\r\n";
-    cout << "<html>\n";
-    cout << "<head>\n";
-    cout << "<title>Intranet</title>\n";
-    cout << "</head>\n";
-    cout << "<body>\n";
+    cout << HTTPHTMLHeader() << endl;
+    cout << head(title("Intranet")) << endl;
+    cout << body() << endl;
 }
 void outputStandardDocTail()
 {
