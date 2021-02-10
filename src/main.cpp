@@ -30,8 +30,15 @@ int main()
     }
     
     HtmlDoc doc = HtmlDoc("savaged");
-    // TODO add page selection then write that page
-    doc.writeH1(page);
+
+    if (page == "1")
+    {
+        doc.writeH1("TODO create page 1");
+    }
+    else
+    {
+        doc.writeH1("TODO create index");
+    }
 
     return 0;
 }
