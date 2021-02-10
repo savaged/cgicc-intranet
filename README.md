@@ -42,7 +42,7 @@ At the start I have two goals.
 
 1. To have fun learning and tinkering with CGI
 2. To be able to browse from any device to my useful private(ish) data, at home.
-    2.1 That includes my 'todo' list and I had in mind something like this:
+    1. That includes my 'todo' list and I had in mind something like this:
 ```
 #!/bin/bash
 echo "<html><head><title>TO DO</title></head><body><table>" ;
