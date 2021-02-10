@@ -1,12 +1,13 @@
+CXXFLAGS:= -g -Wall -Wextra -Werror
 TARGET:= index.cgi
-OBJ:= main.o
-SRC:= src/main.cpp
+OBJDIR:= obj/
+OBJ:= $(OBJDIR)main.o
 
 $(TARGET): $(OBJ)
-	g++ -o $(TARGET) $< -lcgicc
+	g++ $(CXXFLAGS) -o $(TARGET) $< -lcgicc
 
-$(OBJ): $(SRC)
-	g++ -c $(SRC)
+$(OBJ): src/main.cpp
+	g++ $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm $(TARGET) $(OBJ)

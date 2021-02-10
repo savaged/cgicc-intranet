@@ -37,9 +37,12 @@ int main ()
     cout << "<h1>\n";
 
     form_iterator fi = formData.getElement("action");  
-    if( !fi->isEmpty() && fi != (*formData).end()) {  
+    if(!fi->isEmpty() && fi != (*formData).end()) 
+    {  
         cout << "Action requested: " << **fi << endl;  
-    } else {
+    }
+    else
+    {
         cout << "Default" << endl;  
     }
     
