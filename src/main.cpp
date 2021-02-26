@@ -10,9 +10,8 @@
 #include <cgicc/HTMLClasses.h>  
 
 #include "HtmlDoc.h"
-
-using namespace std;
-using namespace cgicc;
+#include "Index.h"
+#include "PageOne.h"
 
 int main() 
 {
@@ -29,16 +28,21 @@ int main()
         page = "index";  
     }
     
-    HtmlDoc doc = HtmlDoc("savaged");
+    Content *content;
 
+    // TODO change this for a factory
     if (page == "1")
     {
-        doc.writeH1("TODO create page 1");
+        content = new PageOne();
     }
     else
     {
-        doc.writeH1("TODO create index");
+        content = new Index();
     }
+    HtmlDoc *doc = new HtmlDoc("savaged", content);
+    doc->dump();
+
+    delete doc;
 
     return 0;
 }

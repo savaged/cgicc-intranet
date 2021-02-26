@@ -1,0 +1,1 @@
+g++ -g -Wall -Wextra -Werror -I include/ -c src/main.cpp -o obj/main.o

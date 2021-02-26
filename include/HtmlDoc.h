@@ -12,32 +12,31 @@
 #include <cgicc/HTTPHTMLHeader.h> 
 #include <cgicc/HTMLClasses.h>  
 
+#include "Content.h"
+
 class HtmlDoc
 {
 private:
-    void writeHead(const std::string& titleText);
+    string _titleText;
+    Content* _content;
 
-    void writeTail();
+    void dumpHead();
+    void dumpTail();
+
 
 public:
-    HtmlDoc()
+    HtmlDoc(const string &titleText, Content *content)
     {
-        writeHead("Intranet");
-    };
-    HtmlDoc(const std::string& titleText)
-    {
-        writeHead(titleText);
-    };
+        _titleText = titleText;
+        _content = content;
+    }
 
     ~HtmlDoc()
     {
-        writeTail();
-    };
+        // TODO figure out how to this (and if its needed) delete _content; _content = 0;
+    }
 
-    void writeH1(const std::string& text);
-
-    void writeA(
-            const std::string& link, const std::string& text);
+    void dump();
 
 };
 
