@@ -7,6 +7,7 @@ using namespace cgicc;
 class Content 
 {
 public:
+    virtual ~Content() { };
     virtual void dump();
 
 protected:

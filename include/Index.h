@@ -6,6 +6,7 @@
 class Index : public Content
 {
 public:
+    ~Index() { };
     void dump();
 };
 

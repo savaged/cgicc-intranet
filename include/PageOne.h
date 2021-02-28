@@ -6,6 +6,7 @@
 class PageOne : public Content
 {
 public:
+    ~PageOne() { };
     void dump();
 };
 
