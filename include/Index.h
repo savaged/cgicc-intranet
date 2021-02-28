@@ -1,7 +1,7 @@
 #ifndef INDEX_H
 #define INDEX_H
 
-#include "Content.h"
+#include <Content.h>
 
 class Index : public Content
 {

@@ -2,5 +2,6 @@
 
 void Index::dump() 
 {
-    // TODO dumpH1("todo: index");
+    Content::dumpH1("todo: index");
 }
+

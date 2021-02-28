@@ -2,5 +2,5 @@
 
 void PageOne::dump() 
 {
-    // TODO dumpH1("todo: page one");
+    Content::dumpH1("todo: page one");
 }

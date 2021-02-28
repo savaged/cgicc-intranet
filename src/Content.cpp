@@ -1,4 +1,4 @@
-#include "Content.h"
+#include <Content.h>
 
 void Content::dumpH1(const string &text)
 {
@@ -11,3 +11,4 @@ void Content::dumpA(
 {
     cout << a(text).set("href", link) << endl;
 }
+

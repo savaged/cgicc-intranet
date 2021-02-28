@@ -1,7 +1,7 @@
 #ifndef PAGE_ONE_H
 #define PAGE_ONE_H
 
-#include "Content.h"
+#include <Content.h>
 
 class PageOne : public Content
 {
