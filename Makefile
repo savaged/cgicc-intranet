@@ -4,10 +4,10 @@ TARGET:= index.cgi
 OBJDIR:= obj/
 SRCDIR:= src/
 INCDIR:= include/
-OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlDoc.o
+OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlDoc.o $(OBJDIR)Content.o $(OBJDIR)Index.o $(OBJDIR)PageOne.o
 
 $(TARGET): $(OBJ)
-		$(CXX) $(CXXFLAGS) -o $(TARGET) $^ 
+		$(CXX) $(CXXFLAGS) -o $(TARGET) $^ -lcgicc
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
 		$(CXX) $(CXXFLAGS) -I $(INCDIR) -c $< -o $@
