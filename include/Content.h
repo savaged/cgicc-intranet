@@ -6,7 +6,6 @@
 
 #include <cgicc/CgiDefs.h> 
 #include <cgicc/Cgicc.h> 
-#include <cgicc/HTTPHTMLHeader.h> 
 #include <cgicc/HTMLClasses.h>  
 
 using namespace std;
@@ -18,10 +17,15 @@ public:
     virtual void dump() = 0;
 
 protected:
-    void dumpH1(const string &text);
+    void dumpH1(string text);
+    void dumpH2(string text);
+    void dumpBR();
     void dumpA(
-            const string &link,
-            const string &text);
+            string link,
+            string text);
+    string getA(
+            string link,
+            string text);
 };
 
 #endif

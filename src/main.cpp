@@ -9,9 +9,9 @@
 #include <cgicc/HTTPHTMLHeader.h> 
 #include <cgicc/HTMLClasses.h>  
 
-#include "HtmlDoc.h"
-#include "Index.h"
-#include "PageOne.h"
+#include <HtmlDoc.h>
+#include <Index.h>
+#include <PageOne.h>
 
 int main() 
 {
