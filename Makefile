@@ -7,17 +7,20 @@ INCDIR:= include/
 OBJ:= $(OBJDIR)main.o $(OBJDIR)HtmlDoc.o
 
 $(TARGET): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $(TARGET) $^ -lcgicc
+		$(CXX) $(CXXFLAGS) -o $(TARGET) $^ 
 
 $(OBJDIR)%.o: $(SRCDIR)%.cpp
-	$(CXX) $(CXXFLAGS) -I $(INCDIR) -c $< -o $@
+		$(CXX) $(CXXFLAGS) -I $(INCDIR) -c $< -o $@
+
+$(shell mkdir -p $(OBJDIR))
 
 clean:
-	rm -f $(TARGET)
-	rm -f $(OBJDIR)*.o
+		rm -f $(TARGET)
+			rm -f $(OBJDIR)*.o
 
 install: 
-	cp $(TARGET) /usr/lib/cgi-bin
+		cp $(TARGET) /usr/lib/cgi-bin
 
 uninstall: 
-	rm /usr/lib/cgi-bin/$(TARGET)
+		rm /usr/lib/cgi-bin/$(TARGET)
+
