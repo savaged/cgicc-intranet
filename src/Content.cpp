@@ -19,16 +19,6 @@ void Content::dumpA(
         string link, 
         string text)
 {
-    cout << a(text).set("href", link) << endl;
-}
-
-string Content::getA(
-        string link, 
-        string text)
-{
-    string aStart = "<a href=\"";
-    string aMiddle = "\">";
-    string aEnd = "</a>";
     string href;
     if (link.rfind("http", 0) == 0)
     {
@@ -38,6 +28,7 @@ string Content::getA(
     {
         href = "TODO website server and route" + link;
     }
-    return aStart + href + aMiddle + text + aEnd;
+    cout << a(text).set("href", link) << endl;
 }
 
+// TODO add dumpH2 that takes an A element to nest

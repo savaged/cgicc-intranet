@@ -4,7 +4,6 @@ void Index::dump()
 {
     Content::dumpH1("Index");
     Content::dumpBR();
-    Content::dumpH2(Content::getA(
-                "?page=1", "Page One"));
+    Content::dumpA("?page=1", "Page One");
 }
 

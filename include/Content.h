@@ -23,9 +23,6 @@ protected:
     void dumpA(
             string link,
             string text);
-    string getA(
-            string link,
-            string text);
 };
 
 #endif
